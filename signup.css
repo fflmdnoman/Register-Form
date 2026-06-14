@@ -1,0 +1,219 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: sans-serif;
+    /* background: linear-gradient(135deg, #181C14 0%, #3C3D37 100%); */
+    background-image: url(https://cdn.photoroom.com/v2/image-cache?path=gs://background-7ef44.appspot.com/backgrounds_v3/black/47_-_black.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1.5rem;
+}
+
+.container{
+    max-width: 880px;
+    width: 100%;
+
+    /* background: #DFD0B8; */
+    background: transparent;
+
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(13px);
+    border-radius: 32px;
+    box-shadow:  0 25px 50px -12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.signup_imt{
+    padding: 2.5rem 2.8rem;
+}
+
+@media (max-width: 680px){
+    .signup_imt{
+        padding: 1.8rem 1.5rem;
+    }
+}
+
+h1{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ECDFCC;
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.3px;
+}
+p{
+    color: #ECDFCA;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+    border-left: 3px solid #948979;
+    padding-left: 12px;
+}
+
+.row-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    gap: 1.2rem;
+    margin-left: 0;
+}
+.row-2 > :nth-child(n+3){
+    grid-column: span 2;
+}
+
+
+
+@media(max-width: 680px){
+    .row-2{
+        grid-template-columns:repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .row-2 > :nth-child(n+3) {
+        grid-column: span 2;
+    }
+}
+
+.signup_group{
+    margin-bottom: 1.2rem;
+    width: 100%;
+}
+
+label{
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ECDFCC;
+    margin-bottom: 0.5rem;
+}
+
+label i{
+    color: #ECDFCC;
+    margin-right: 8px;
+    width: 18px;
+}
+
+.input_text{
+    width: 100%;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    font-family: sans-serif;
+    transition: all 0.2s;
+    background: transparent;
+    outline: none;
+    color: #ECDFCC;
+}
+
+.input_text:focus{
+    border-color: #ECDFCC;
+    box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.2);
+}
+
+.error_text{
+    color: red;
+    font-size: 0.75rem;
+    margin-top: 6px;
+    display: block;
+    font-weight: 500;
+}
+
+.alert{
+    padding: 0.9rem 1rem;
+    border-radius: 18px;
+    margin-bottom: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.alert_success{
+    background: transparent;
+    border: 1.5px solid #ECDFCC;
+    border-left: 4px solid #948979;
+    color: #1F7D53;
+}
+
+.alert_error{
+    background: #DFD0B8;
+    border-left: #b91c1c;
+    color: #991b1b;
+}
+
+/* REG BTN */
+.reg_btn{
+    background: linear-gradient(100deg, #181c14, #3C3D37) ;
+    width: 100%;
+    border: 1.5px solid radial-gradient(0deg, #3C3D37, #181C14);
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: wheat;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 0.3rem;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.reg_btn:hover{
+    transform: translateY(-2px);
+    background: linear-gradient(100deg, #3C3D37, #181c14);
+    box-shadow: 0 12px 22px -8px rgba(0, 0, 0, 0.3);
+    border: 1.5px solid radial-gradient(0deg, #181C14, #3C3D37); ;
+}
+
+.reg_btn:active{
+    transform: scale(0.98);
+}
+
+hr{
+    margin: 1.5rem 0  0.8rem;
+    border: none;
+    border-top: 1px solid #222831;
+}
+
+
+/* Checkbox */
+
+.terms{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0 20px;
+    /* width: 100%; */
+}
+
+.terms label{
+    margin: 0;
+    font-weight: 500;
+}
+
+
+/* Footer */
+.footnote{
+    text-align: center;
+    font-size: 0.9rem;
+    color: #ECDFCC;
+}
